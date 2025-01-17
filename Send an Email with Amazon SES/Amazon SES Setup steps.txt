@@ -1,5 +1,16 @@
 Link: https://aws.amazon.com/getting-started/hands-on/send-an-email-with-amazon-ses/#
 
+
+Use Amazon SES(Simple Email Services) and Amazon Route 53 for domain 
+
+Amazon Simple Email Service (SES) is a cost-effective email service built on the reliable and scalable infrastructure that Amazon.com developed to serve its own customer base. 
+With Amazon SES, you can send transactional email, marketing messages, or any other type of high-quality content to your customers
+
+
+.....................................................
+
+
+
 Step 1 : Verify your email
 
 Before you can send an email using Amazon SES, you must prove that you own the sender's email address by verifying the address (or the domain of the address) with Amazon SES. If you are a new user of Amazon SES, you must also verify the recipient's address, because your account is in a test environment called the Amazon SES sandbox. You can later apply to move out of the sandbox and lift the recipient address limitation. 
@@ -92,6 +103,14 @@ Content-Type: text/html
 
 Copy
 3. Then, choose Send test email.
+.........................................
+
+
+Email can be send via 3 ways
+1. Amazon console
+2. SMTP
+3. API via programing languages 
+..........................
 
 
 
