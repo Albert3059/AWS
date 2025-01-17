@@ -1,0 +1,97 @@
+Link: https://aws.amazon.com/getting-started/hands-on/send-an-email-with-amazon-ses/#
+
+Step 1 : Verify your email
+
+Before you can send an email using Amazon SES, you must prove that you own the sender's email address by verifying the address (or the domain of the address) with Amazon SES. If you are a new user of Amazon SES, you must also verify the recipient's address, because your account is in a test environment called the Amazon SES sandbox. You can later apply to move out of the sandbox and lift the recipient address limitation. 
+
+In this tutorial, you will send an email to and from the same email address.
+
+1. Navigate to the Amazon SES console, at https://console.aws.amazon.com/ses.
+
+2. On the Amazon SES home page, choose Get started. 
+
+
+3. Enter your email address, and choose Next.
+
+
+4. Enter your sending domain, and choose Next.
+
+If your domain is www.example.com, enter example.com as your domain. Don't include the "www." part, because the domain verification process won't succeed if you do.
+Note: For your initial domain, it is recommended that you verify a valid domain that displays identifiable information about your organization to establish your reputation with AWS as a trusted email sender.
+
+
+5. Leave default selections for Add MAIL FROM domain - optional, and choose Next.
+
+
+6. Review your inputs, and choose Get started.
+
+
+7. Sign in to the email client you use to receive email for the email address you entered in the previous step.
+
+8. In your email client, open the message from Amazon Web Services asking you to confirm that you own the email address. Select the link in the message.
+
+
+9. Navigate back to the Amazon SES console, and confirm that the status of the email address in the Amazon SES console is verified.
+
+
+
+
+
+
+Step 2 : Verify you domain
+For Domain i  am using Amazon Route 53
+
+Before applying for production access, you must first verify your domain.  
+
+1. On the Get set up page, in the Verify sending domain section, choose Get DNS records.
+
+
+2. From the Publish DNS records table, copy records that appear in this section to be published (added) to your DNS provider.
+
+Alternatively, you can choose Download .csv record set to save a copy of the records to your computer.
+
+3. Log into your domain’s DNS or web hosting provider, and then add the records containing the values that you copied or saved previously.
+
+Note: Different providers have different procedures for updating DNS records. See the DNS/Hosting provider table following these procedures. 
+
+4. Navigate back to the Amazon SES console, and refresh the set up page. Confirm that the status of the domain in the Amazon SES console is verified.
+
+
+
+
+
+Step 3: Send the  Email 
+
+
+Now that you have verified an email address and domain, you can send an email. With Amazon SES, you can send an email in three ways: using the console, using the Simple Mail Transfer Protocol (SMTP) interface, or using the API.
+
+This tutorial shows how to use the simplest method, the console. After you get started with Amazon SES, you will want to send your emails using the SMTP interface or the API, because you can access those programmatically.
+
+With Amazon SES, you can send formatted email or raw email. If you choose formatted email, Amazon SES formats the email for you. If you choose raw email, you must manually format the email, which gives you more control over the email headers and how the message displays. In this tutorial, we use raw format so that we can demonstrate how to send an email formatted in HTML.
+
+1. Navigate back to the Get setup page, in the Send test email section, choose Send test email.
+
+
+2. On the Send test email page, make the following changes:
+
+For Email format, choose Raw.
+For From-address, leave default input.
+For Scenario, choose Custom.
+For Custom recipient, enter the email address you previously verified.
+For Message, copy and paste the following message into the provided text box.
+Subject: Amazon SES Test
+MIME-Version: 1.0
+Content-Type: text/html
+<!DOCTYPE html>
+<html>
+<body>
+<h1>You have successfully sent an email using Amazon SES!</h1>
+<p>For more information about Amazon SES, see the <a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.</p>
+</body>
+</html>
+
+Copy
+3. Then, choose Send test email.
+
+
+
