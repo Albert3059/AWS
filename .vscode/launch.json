@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "bashdb",
+            "request": "launch",
+            "name": "Bash Debug",
+            "program": "/mnt/c/Users/TMT/Documents/GitHub/AWS/SMTP_interface.sh",
+            "args": [],
+            "env": {},
+            "cwd": "/mnt/c/Users/TMT/Documents/GitHub/AWS"
+        }
+    ]
+}
