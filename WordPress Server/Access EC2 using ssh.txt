@@ -1,5 +1,0 @@
-1. Create a keypair
-2. Enable ssh, https, and https
-3. Before connecting , assign it an elastic IP address to reverse the public ip address of the instance, 
-so i does not change after server reboot 
-4. Create elastic ip and associate it with the instance 
